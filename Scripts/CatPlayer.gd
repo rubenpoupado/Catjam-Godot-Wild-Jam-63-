@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var gameManager = get_node("../")
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -320.0
@@ -27,44 +28,51 @@ func _physics_process(delta):
 			$CatSprite.flip_h = false
 	elif not isParkouring:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-			
+		
 	if not is_on_floor():
-		velocity.y += gravity * delta
 		if is_on_wall():
 			isSliding = true
-		if isSliding and Input.is_action_just_pressed("Jump"):
-			$CatSprite.flip_h = not $CatSprite.flip_h
-			velocity.y = JUMP_VELOCITY * 1.5
+		else:
+			isSliding = false
+		if isSliding:
 			if $CatSprite.flip_h:
-				velocity.x = -SPEED * 1.5
+				velocity.x = -1
 			else:
-				velocity.x = SPEED * 1.5
-			isParkouring = true
+				velocity.x = 1
+			if Input.is_action_just_pressed("Jump"):
+				$CatSprite.flip_h = not $CatSprite.flip_h
+				velocity.y = JUMP_VELOCITY * 1.5
+				if $CatSprite.flip_h:
+					velocity.x = -SPEED * 1.5
+				else:
+					velocity.x = SPEED * 1.5
+				isParkouring = true
+			
+		velocity.y += gravity * delta
+		clampf(velocity.y, -1, 1)
 	else:
 		isParkouring = false
-		isSliding = false
 		if Input.is_action_just_pressed("Jump"):
 			velocity.y = JUMP_VELOCITY
 			
 	move_and_slide()
+	
+func die():
+	gameManager.emit_signal("playerDeath")
+		
+# Animations
 func update_animation_parameters():
 	if velocity == Vector2.ZERO:
-		animationTree["parameters/conditions/isIdle"] = true
-		animationTree["parameters/conditions/isRunning"] = false
-		animationTree["parameters/conditions/isJumping"] = false
-		animationTree["parameters/conditions/isFalling"] = false
+		change_animation(true, false, false, false)
 	elif velocity.x and is_on_floor():
-		animationTree["parameters/conditions/isIdle"] = false
-		animationTree["parameters/conditions/isRunning"] = true
-		animationTree["parameters/conditions/isJumping"] = false
-		animationTree["parameters/conditions/isFalling"] = false
+		change_animation(false, true, false, false)
 	elif velocity.y < 0:
-		animationTree["parameters/conditions/isIdle"] = false
-		animationTree["parameters/conditions/isRunning"] = false
-		animationTree["parameters/conditions/isJumping"] = true
-		animationTree["parameters/conditions/isFalling"] = false
+		change_animation(false, false, true, false)
 	elif velocity.y > 0:
-		animationTree["parameters/conditions/isIdle"] = false
-		animationTree["parameters/conditions/isRunning"] = false
-		animationTree["parameters/conditions/isJumping"] = false
-		animationTree["parameters/conditions/isFalling"] = true
+		change_animation(false, false, false, true)
+		
+func change_animation(isIdle, isRunning, isJumping, isFalling):
+	animationTree["parameters/conditions/isIdle"] = isIdle
+	animationTree["parameters/conditions/isRunning"] = isRunning
+	animationTree["parameters/conditions/isJumping"] = isJumping
+	animationTree["parameters/conditions/isFalling"] = isFalling
