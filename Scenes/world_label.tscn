@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcowcx6irwxo1"]
+
+[ext_resource type="FontFile" uid="uid://coyytm3be7l2i" path="res://Font/KdamThmorPro-Regular.ttf" id="1_fu4la"]
+
+[node name="Label4" type="Label"]
+offset_right = 100.0
+offset_bottom = 132.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_fu4la")
+theme_override_font_sizes/font_size = 26
+text = "Cats 
+can 
+parkour!"
+horizontal_alignment = 1
+vertical_alignment = 1

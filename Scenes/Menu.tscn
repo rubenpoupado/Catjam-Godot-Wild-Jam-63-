@@ -1,0 +1,152 @@
+[gd_scene load_steps=10 format=3 uid="uid://4nfh0rapsa30"]
+
+[ext_resource type="Texture2D" uid="uid://b11okeyyihycm" path="res://Sprites/grass.png" id="1_iepo2"]
+[ext_resource type="Script" path="res://Scripts/MenuButton.gd" id="1_yt45w"]
+[ext_resource type="Texture2D" uid="uid://dm3yd6jounb16" path="res://Sprites/WhiteCatIdle.png" id="2_qqaoj"]
+
+[sub_resource type="SystemFont" id="SystemFont_tnvts"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_5sw48"]
+
+[sub_resource type="SystemFont" id="SystemFont_gurmu"]
+
+[sub_resource type="SystemFont" id="SystemFont_b0qhe"]
+
+[sub_resource type="Animation" id="Animation_yfyew"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cat:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0kigs"]
+_data = {
+"idle": SubResource("Animation_yfyew")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yt45w")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 203.0
+offset_right = 492.0
+offset_bottom = 311.0
+theme_override_colors/font_outline_color = Color(0.2, 0.262745, 0.603922, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_tnvts")
+theme_override_font_sizes/font_size = 64
+text = "Play"
+icon_alignment = 2
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 463.0
+offset_right = 492.0
+offset_bottom = 571.0
+theme_override_colors/font_outline_color = Color(0.2, 0.262745, 0.603922, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_5sw48")
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 534.0
+offset_top = 203.0
+offset_right = 1728.0
+offset_bottom = 877.0
+
+[node name="Levels" type="ItemList" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.517647, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_gurmu")
+theme_override_font_sizes/font_size = 64
+allow_search = false
+item_count = 4
+item_0/text = "Tutorial"
+item_1/text = "Level 1"
+item_1/selectable = false
+item_1/disabled = true
+item_2/text = "Level 2"
+item_2/selectable = false
+item_2/disabled = true
+item_3/text = "Level 3"
+item_3/selectable = false
+item_3/disabled = true
+
+[node name="Credits" type="Label" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.517647, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_b0qhe")
+theme_override_font_sizes/font_size = 60
+text = "Writing & Coding
+Poupado
+
+Art
+Toino"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="World_Menu" type="Node" parent="."]
+
+[node name="Grass" type="Sprite2D" parent="World_Menu"]
+z_index = -1
+position = Vector2(320, 1080)
+scale = Vector2(10, 10)
+texture = ExtResource("1_iepo2")
+
+[node name="Grass2" type="Sprite2D" parent="World_Menu"]
+z_index = -1
+position = Vector2(960, 1080)
+scale = Vector2(10, 10)
+texture = ExtResource("1_iepo2")
+
+[node name="Grass3" type="Sprite2D" parent="World_Menu"]
+z_index = -1
+position = Vector2(1600, 1080)
+scale = Vector2(10, 10)
+texture = ExtResource("1_iepo2")
+
+[node name="Cat" type="Sprite2D" parent="World_Menu"]
+z_index = -1
+position = Vector2(1391, 620)
+scale = Vector2(20, 20)
+texture = ExtResource("2_qqaoj")
+flip_h = true
+vframes = 6
+
+[node name="CatIdleAnimation" type="AnimationPlayer" parent="World_Menu/Cat"]
+root_node = NodePath("../..")
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_0kigs")
+}
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_pressed"]
+[connection signal="item_clicked" from="PanelContainer/Levels" to="." method="_on_levels_item_clicked"]

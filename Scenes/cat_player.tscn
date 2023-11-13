@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cablhapq385cn"]
+[gd_scene load_steps=29 format=3 uid="uid://cablhapq385cn"]
 
 [ext_resource type="Script" path="res://Scripts/CatPlayer.gd" id="1_txm2r"]
 [ext_resource type="Texture2D" uid="uid://lf7i0agliqvi" path="res://Sprites/WhiteCatRun.png" id="2_kqqv0"]
@@ -10,42 +10,41 @@ size = Vector2(12, 12)
 
 [sub_resource type="Animation" id="Animation_fqbsd"]
 resource_name = "CatPlayer_Fall"
-length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CatSprite:frame")
+tracks/0/path = NodePath("CatSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [16]
+"values": [ExtResource("4_88prg")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CatSprite:texture")
+tracks/1/path = NodePath("CatSprite:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_88prg")]
+"values": [26]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CatSprite:vframes")
+tracks/2/path = NodePath("CatSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [26]
+"values": [17]
 }
 
 [sub_resource type="Animation" id="Animation_jmtjj"]
@@ -55,38 +54,38 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CatSprite:frame")
+tracks/0/path = NodePath("CatSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [ExtResource("2_oipdo")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CatSprite:texture")
+tracks/1/path = NodePath("CatSprite:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_oipdo")]
+"values": [6]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CatSprite:vframes")
+tracks/2/path = NodePath("CatSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [6]
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_yfahh"]
@@ -95,38 +94,38 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CatSprite:frame")
+tracks/0/path = NodePath("CatSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [3, 13, 14, 15]
+"values": [ExtResource("4_88prg")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CatSprite:texture")
+tracks/1/path = NodePath("CatSprite:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_88prg")]
+"values": [26]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CatSprite:vframes")
+tracks/2/path = NodePath("CatSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [26]
+"values": [3, 13, 15]
 }
 
 [sub_resource type="Animation" id="Animation_72ecy"]
@@ -176,38 +175,38 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CatSprite:frame")
+tracks/0/path = NodePath("CatSprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.075, 0.15, 0.225, 0.3, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [ExtResource("2_kqqv0")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CatSprite:texture")
+tracks/1/path = NodePath("CatSprite:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_kqqv0")]
+"values": [6]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CatSprite:vframes")
+tracks/2/path = NodePath("CatSprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.225, 0.3, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [6]
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_o6ujv"]
@@ -244,9 +243,6 @@ animation = &"CatPlayer_Idle"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t6814"]
 animation = &"CatPlayer_Jump"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1lsso"]
-animation = &"CatPlayer_Land"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e8gq7"]
 animation = &"CatPlayer_Run"
 
@@ -256,10 +252,6 @@ advance_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gfvqe"]
 advance_mode = 2
 advance_condition = &"isRunning"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ubxv7"]
-advance_mode = 2
-advance_condition = &"isIdle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8ym4d"]
 advance_mode = 2
@@ -273,17 +265,9 @@ advance_condition = &"isJumping"
 advance_mode = 2
 advance_condition = &"isFalling"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_if45p"]
-advance_mode = 2
-advance_condition = &"isFalling"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u0vda"]
 advance_mode = 2
 advance_condition = &"isFalling"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_itu4h"]
-advance_mode = 2
-advance_condition = &"isLanding"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mhjdr"]
 advance_mode = 2
@@ -297,28 +281,35 @@ advance_condition = &"isIdle"
 advance_mode = 2
 advance_condition = &"isRunning"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j2xk8"]
+advance_mode = 2
+advance_condition = &"isJumping"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k2af0"]
+advance_mode = 2
+advance_condition = &"isFalling"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_g7amk"]
 states/CatPlayer_Fall/node = SubResource("AnimationNodeAnimation_tq4pq")
-states/CatPlayer_Fall/position = Vector2(531, 202)
+states/CatPlayer_Fall/position = Vector2(531, 211)
 states/CatPlayer_Idle/node = SubResource("AnimationNodeAnimation_4i3tk")
 states/CatPlayer_Idle/position = Vector2(335, 96)
 states/CatPlayer_Jump/node = SubResource("AnimationNodeAnimation_t6814")
-states/CatPlayer_Jump/position = Vector2(531, 27)
-states/CatPlayer_Land/node = SubResource("AnimationNodeAnimation_1lsso")
-states/CatPlayer_Land/position = Vector2(335, 202)
+states/CatPlayer_Jump/position = Vector2(531, 22)
 states/CatPlayer_Run/node = SubResource("AnimationNodeAnimation_e8gq7")
 states/CatPlayer_Run/position = Vector2(717, 96)
+states/End/position = Vector2(900, 96)
 states/Start/position = Vector2(147, 96)
-transitions = ["Start", "CatPlayer_Idle", SubResource("AnimationNodeStateMachineTransition_4bs8p"), "CatPlayer_Idle", "CatPlayer_Run", SubResource("AnimationNodeStateMachineTransition_gfvqe"), "CatPlayer_Land", "CatPlayer_Idle", SubResource("AnimationNodeStateMachineTransition_ubxv7"), "CatPlayer_Idle", "CatPlayer_Jump", SubResource("AnimationNodeStateMachineTransition_8ym4d"), "CatPlayer_Run", "CatPlayer_Jump", SubResource("AnimationNodeStateMachineTransition_3yqaq"), "CatPlayer_Jump", "CatPlayer_Fall", SubResource("AnimationNodeStateMachineTransition_yjmsl"), "CatPlayer_Run", "CatPlayer_Fall", SubResource("AnimationNodeStateMachineTransition_if45p"), "CatPlayer_Idle", "CatPlayer_Fall", SubResource("AnimationNodeStateMachineTransition_u0vda"), "CatPlayer_Fall", "CatPlayer_Land", SubResource("AnimationNodeStateMachineTransition_itu4h"), "CatPlayer_Run", "CatPlayer_Idle", SubResource("AnimationNodeStateMachineTransition_mhjdr"), "CatPlayer_Fall", "CatPlayer_Idle", SubResource("AnimationNodeStateMachineTransition_eus2k"), "CatPlayer_Fall", "CatPlayer_Run", SubResource("AnimationNodeStateMachineTransition_ucgpe")]
-graph_offset = Vector2(-65, -20)
+transitions = ["Start", "CatPlayer_Idle", SubResource("AnimationNodeStateMachineTransition_4bs8p"), "CatPlayer_Idle", "CatPlayer_Run", SubResource("AnimationNodeStateMachineTransition_gfvqe"), "CatPlayer_Idle", "CatPlayer_Jump", SubResource("AnimationNodeStateMachineTransition_8ym4d"), "CatPlayer_Run", "CatPlayer_Jump", SubResource("AnimationNodeStateMachineTransition_3yqaq"), "CatPlayer_Jump", "CatPlayer_Fall", SubResource("AnimationNodeStateMachineTransition_yjmsl"), "CatPlayer_Idle", "CatPlayer_Fall", SubResource("AnimationNodeStateMachineTransition_u0vda"), "CatPlayer_Run", "CatPlayer_Idle", SubResource("AnimationNodeStateMachineTransition_mhjdr"), "CatPlayer_Fall", "CatPlayer_Idle", SubResource("AnimationNodeStateMachineTransition_eus2k"), "CatPlayer_Fall", "CatPlayer_Run", SubResource("AnimationNodeStateMachineTransition_ucgpe"), "CatPlayer_Fall", "CatPlayer_Jump", SubResource("AnimationNodeStateMachineTransition_j2xk8"), "CatPlayer_Run", "CatPlayer_Fall", SubResource("AnimationNodeStateMachineTransition_k2af0")]
+graph_offset = Vector2(-88, -4)
 
 [node name="CatPlayer" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_txm2r")
 
 [node name="CatSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_oipdo")
-vframes = 6
+texture = ExtResource("4_88prg")
+vframes = 26
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -330,9 +321,6 @@ libraries = {
 "": SubResource("AnimationLibrary_2qymw")
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
-
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_g7amk")
 anim_player = NodePath("../AnimationPlayer")
@@ -340,5 +328,4 @@ active = true
 parameters/conditions/isFalling = false
 parameters/conditions/isIdle = false
 parameters/conditions/isJumping = false
-parameters/conditions/isLanding = false
 parameters/conditions/isRunning = false
