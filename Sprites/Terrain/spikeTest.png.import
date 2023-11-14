@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm3yd6jounb16"
-path="res://.godot/imported/WhiteCatIdle.png-d9b9c32c61e13dc3eeaeef7c4614830b.ctex"
+uid="uid://bytd8fsd8o7k5"
+path="res://.godot/imported/spikeTest.png-210c419932b8070f12522c1cc741b808.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/WhiteCatIdle.png"
-dest_files=["res://.godot/imported/WhiteCatIdle.png-d9b9c32c61e13dc3eeaeef7c4614830b.ctex"]
+source_file="res://Sprites/Terrain/spikeTest.png"
+dest_files=["res://.godot/imported/spikeTest.png-210c419932b8070f12522c1cc741b808.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co5jitdhtj60e"
-path="res://.godot/imported/dirt2.png-8505c51d7e5be6e201f95bdfbe9746ec.ctex"
+uid="uid://rfwweobgtrw8"
+path="res://.godot/imported/brick.png-1380003aa0982ce9c86ab237969d309b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/dirt2.png"
-dest_files=["res://.godot/imported/dirt2.png-8505c51d7e5be6e201f95bdfbe9746ec.ctex"]
+source_file="res://Sprites/Terrain/brick.png"
+dest_files=["res://.godot/imported/brick.png-1380003aa0982ce9c86ab237969d309b.ctex"]
 
 [params]
 

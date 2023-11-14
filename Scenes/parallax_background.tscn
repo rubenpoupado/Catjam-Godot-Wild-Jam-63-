@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dc531n74pd0k1"]
+
+[ext_resource type="Texture2D" uid="uid://sh72u8juksi0" path="res://Sprites/Background/sky_color.png" id="1_7wxly"]
+[ext_resource type="Texture2D" uid="uid://b61c2dadylu50" path="res://Sprites/Background/cloud_cover_2.png" id="2_wnq64"]
+[ext_resource type="Script" path="res://Scripts/cloud_motion.gd" id="3_wnkte"]
+[ext_resource type="Texture2D" uid="uid://dd5xqr7tnk8qi" path="res://Sprites/Background/cloud_cover_1.png" id="4_1dd85"]
+[ext_resource type="Texture2D" uid="uid://cgqp5xmfi4oih" path="res://Sprites/Background/hills.png" id="5_gppra"]
+[ext_resource type="Texture2D" uid="uid://b8mcwid8skren" path="res://Sprites/Background/foreground_scenery.png" id="6_4gf0m"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+position = Vector2(-64, 1276)
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sky"]
+position = Vector2(-1061, -2965)
+scale = Vector2(10, 10)
+texture = ExtResource("1_7wxly")
+centered = false
+
+[node name="big_clouds" type="ParallaxLayer" parent="."]
+position = Vector2(8, -15)
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="big_clouds"]
+position = Vector2(-776, -840)
+scale = Vector2(6, 6)
+texture = ExtResource("2_wnq64")
+centered = false
+
+[node name="motion_clouds" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1728, 0)
+script = ExtResource("3_wnkte")
+
+[node name="Sprite2D" type="Sprite2D" parent="motion_clouds"]
+position = Vector2(-833, -795)
+scale = Vector2(6, 6)
+texture = ExtResource("4_1dd85")
+centered = false
+
+[node name="hills" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="hills"]
+position = Vector2(-776, -803)
+scale = Vector2(6, 6)
+texture = ExtResource("5_gppra")
+centered = false
+
+[node name="foreground" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="foreground"]
+position = Vector2(-773, -772)
+scale = Vector2(6, 6)
+texture = ExtResource("6_4gf0m")
+centered = false

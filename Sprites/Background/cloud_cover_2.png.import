@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvnkgtjk2xd06"
-path="res://.godot/imported/DeadCat.png-dc742c1badb8e69e26f96806529397dc.ctex"
+uid="uid://b61c2dadylu50"
+path="res://.godot/imported/cloud_cover_2.png-54149673b3c2bdfc3a2a7844c3213768.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/DeadCat.png"
-dest_files=["res://.godot/imported/DeadCat.png-dc742c1badb8e69e26f96806529397dc.ctex"]
+source_file="res://Sprites/Background/cloud_cover_2.png"
+dest_files=["res://.godot/imported/cloud_cover_2.png-54149673b3c2bdfc3a2a7844c3213768.ctex"]
 
 [params]
 

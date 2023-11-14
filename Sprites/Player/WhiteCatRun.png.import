@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rfwweobgtrw8"
-path="res://.godot/imported/brick.png-b95ec73c70364c1639d7f6bb53031bf8.ctex"
+uid="uid://lf7i0agliqvi"
+path="res://.godot/imported/WhiteCatRun.png-2882980b997312bce5e75877bfb57515.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/brick.png"
-dest_files=["res://.godot/imported/brick.png-b95ec73c70364c1639d7f6bb53031bf8.ctex"]
+source_file="res://Sprites/Player/WhiteCatRun.png"
+dest_files=["res://.godot/imported/WhiteCatRun.png-2882980b997312bce5e75877bfb57515.ctex"]
 
 [params]
 

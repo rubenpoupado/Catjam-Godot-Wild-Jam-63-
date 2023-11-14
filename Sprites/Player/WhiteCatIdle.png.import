@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bupywyq4lm7nb"
-path="res://.godot/imported/WhiteCatJump.png-10dc61789f5efe2cc672b5ad04a0af4c.ctex"
+uid="uid://dm3yd6jounb16"
+path="res://.godot/imported/WhiteCatIdle.png-4e37677f5c93d8a0f7e34fdaa9fce03d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/WhiteCatJump.png"
-dest_files=["res://.godot/imported/WhiteCatJump.png-10dc61789f5efe2cc672b5ad04a0af4c.ctex"]
+source_file="res://Sprites/Player/WhiteCatIdle.png"
+dest_files=["res://.godot/imported/WhiteCatIdle.png-4e37677f5c93d8a0f7e34fdaa9fce03d.ctex"]
 
 [params]
 

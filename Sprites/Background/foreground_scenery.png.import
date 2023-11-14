@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lf7i0agliqvi"
-path="res://.godot/imported/WhiteCatRun.png-77c8f34e6f59dc36ab58e6f2040d5572.ctex"
+uid="uid://b8mcwid8skren"
+path="res://.godot/imported/foreground_scenery.png-87ce5c98b948ff1cabf1af68ecf8fed0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/WhiteCatRun.png"
-dest_files=["res://.godot/imported/WhiteCatRun.png-77c8f34e6f59dc36ab58e6f2040d5572.ctex"]
+source_file="res://Sprites/Background/foreground_scenery.png"
+dest_files=["res://.godot/imported/foreground_scenery.png-87ce5c98b948ff1cabf1af68ecf8fed0.ctex"]
 
 [params]
 
