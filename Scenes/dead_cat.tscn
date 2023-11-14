@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://k1gijlwx2x80"]
 
-[ext_resource type="Texture2D" uid="uid://dvnkgtjk2xd06" path="res://Sprites/DeadCat.png" id="1_1dkl1"]
+[ext_resource type="Texture2D" uid="uid://dvnkgtjk2xd06" path="res://Sprites/Player/DeadCat.png" id="1_1dkl1"]
 
 [node name="DeadCat" type="Node2D"]
 scale = Vector2(2, 2)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=29 format=3 uid="uid://cablhapq385cn"]
 
 [ext_resource type="Script" path="res://Scripts/CatPlayer.gd" id="1_txm2r"]
-[ext_resource type="Texture2D" uid="uid://lf7i0agliqvi" path="res://Sprites/WhiteCatRun.png" id="2_kqqv0"]
-[ext_resource type="Texture2D" uid="uid://dm3yd6jounb16" path="res://Sprites/WhiteCatIdle.png" id="2_oipdo"]
-[ext_resource type="Texture2D" uid="uid://bupywyq4lm7nb" path="res://Sprites/WhiteCatJump.png" id="4_88prg"]
+[ext_resource type="Texture2D" uid="uid://lf7i0agliqvi" path="res://Sprites/Player/WhiteCatRun.png" id="2_kqqv0"]
+[ext_resource type="Texture2D" uid="uid://dm3yd6jounb16" path="res://Sprites/Player/WhiteCatIdle.png" id="2_oipdo"]
+[ext_resource type="Texture2D" uid="uid://bupywyq4lm7nb" path="res://Sprites/Player/WhiteCatJump.png" id="4_88prg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ahnq"]
 size = Vector2(12, 12)
@@ -308,8 +308,8 @@ scale = Vector2(2, 2)
 script = ExtResource("1_txm2r")
 
 [node name="CatSprite" type="Sprite2D" parent="."]
-texture = ExtResource("4_88prg")
-vframes = 26
+texture = ExtResource("2_oipdo")
+vframes = 6
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

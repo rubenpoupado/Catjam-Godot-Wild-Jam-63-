@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://d05478qmbkpg4"]
+
+[ext_resource type="Script" path="res://Scripts/saw_rotation.gd" id="1_2hx6l"]
+[ext_resource type="Script" path="res://Scripts/saw_movement.gd" id="1_xkqsm"]
+[ext_resource type="Script" path="res://Scripts/spike.gd" id="2_4a72q"]
+[ext_resource type="Texture2D" uid="uid://bypyge66xja4h" path="res://Sprites/saw.png" id="2_r6eb4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pua0s"]
+radius = 21.0238
+
+[node name="movingSaw" type="Node2D"]
+script = ExtResource("1_xkqsm")
+
+[node name="saw" type="Area2D" parent="."]
+script = ExtResource("2_4a72q")
+
+[node name="Sprite2D" type="Sprite2D" parent="saw"]
+texture = ExtResource("2_r6eb4")
+script = ExtResource("1_2hx6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="saw"]
+shape = SubResource("CircleShape2D_pua0s")
+
+[connection signal="body_entered" from="saw" to="saw" method="_on_body_entered"]
