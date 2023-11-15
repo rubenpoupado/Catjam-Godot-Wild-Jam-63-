@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 const WAIT_DURATION = 1.0
@@ -11,11 +12,16 @@ var platform_center = 32
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	move_object()
+	if not Engine.is_editor_hint():
+		move_object()
 
+func _process(delta):
+	queue_redraw()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	object.position = object.position.lerp(follow, 0.5)
+	if not Engine.is_editor_hint():
+		object.position = object.position.lerp(follow, 0.5)
 	
 func move_object():
 	var direction = Vector2.RIGHT * distance 
@@ -24,3 +30,7 @@ func move_object():
 	var platform_tween = create_tween().set_loops()
 	platform_tween.tween_property(self, "follow", direction, duration).set_delay(WAIT_DURATION)
 	platform_tween.tween_property(self, "follow", Vector2.ZERO, duration).set_delay(WAIT_DURATION)
+
+func _draw():
+	if Engine.is_editor_hint():
+		draw_line(Vector2(position.x-platform_center-global_position.x, position.y-global_position.y), Vector2(position.x+platform_center-global_position.x + distance, position.y-global_position.y), Color.RED, 1.5)

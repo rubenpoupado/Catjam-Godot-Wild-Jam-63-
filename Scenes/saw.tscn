@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bypyge66xja4h" path="res://Sprites/saw.png" id="2_r6eb4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pua0s"]
-radius = 21.0238
+radius = 19.0
 
 [node name="movingSaw" type="Node2D"]
 script = ExtResource("1_xkqsm")
