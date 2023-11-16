@@ -1,9 +1,9 @@
 extends Camera2D
 
-@export var limitTop = -900
-@export var limitLeft = -500
-@export var limitRight = 1250
-@export var limitBottom = 1000
+@export var limitTop = -9000
+@export var limitLeft = -5000
+@export var limitRight = 12500
+@export var limitBottom = 10000
 @export var _zoom = 2.0
 
 # Called when the node enters the scene tree for the first time.

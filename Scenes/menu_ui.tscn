@@ -1,0 +1,129 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3u07t88377jl"]
+
+[ext_resource type="Script" path="res://Scripts/InGameMenu.gd" id="1_5g5iy"]
+
+[sub_resource type="SystemFont" id="SystemFont_guj2r"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_7dfi6"]
+subpixel_positioning = 0
+
+[node name="MenuUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5g5iy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenusPanel" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -270.0
+offset_right = 240.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelCompleteMenu" type="Control" parent="CanvasLayer/MenusPanel"]
+visible = false
+anchors_preset = 0
+
+[node name="LevelCompleteLabel" type="Label" parent="CanvasLayer/MenusPanel/LevelCompleteMenu"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 480.0
+offset_bottom = 160.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_guj2r")
+theme_override_font_sizes/font_size = 60
+text = "Level Complete!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextLevel" type="Button" parent="CanvasLayer/MenusPanel/LevelCompleteMenu"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 270.0
+offset_right = 429.0
+offset_bottom = 371.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_7dfi6")
+theme_override_font_sizes/font_size = 60
+text = "Next Level"
+
+[node name="BackToMenu" type="Button" parent="CanvasLayer/MenusPanel/LevelCompleteMenu"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 399.0
+offset_right = 429.0
+offset_bottom = 500.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_7dfi6")
+theme_override_font_sizes/font_size = 60
+text = "Back to Menu"
+
+[node name="PauseMenu" type="Control" parent="CanvasLayer/MenusPanel"]
+visible = false
+anchors_preset = 0
+
+[node name="PauseLabel" type="Label" parent="CanvasLayer/MenusPanel/PauseMenu"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 480.0
+offset_bottom = 160.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_guj2r")
+theme_override_font_sizes/font_size = 60
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume" type="Button" parent="CanvasLayer/MenusPanel/PauseMenu"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 270.0
+offset_right = 429.0
+offset_bottom = 371.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_7dfi6")
+theme_override_font_sizes/font_size = 60
+text = "Resume
+"
+
+[node name="BackToMenu" type="Button" parent="CanvasLayer/MenusPanel/PauseMenu"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 399.0
+offset_right = 429.0
+offset_bottom = 500.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("SystemFont_7dfi6")
+theme_override_font_sizes/font_size = 60
+text = "Back to Menu"
+
+[connection signal="levelComplete" from="." to="." method="_on_level_complete"]
+[connection signal="pressed" from="CanvasLayer/MenusPanel/LevelCompleteMenu/NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="CanvasLayer/MenusPanel/LevelCompleteMenu/BackToMenu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/MenusPanel/PauseMenu/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/MenusPanel/PauseMenu/BackToMenu" to="." method="_on_back_to_menu_pressed"]

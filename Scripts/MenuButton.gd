@@ -34,5 +34,5 @@ func _on_play_pressed():
 
 func _on_levels_item_clicked(index, at_position, mouse_button_index):
 	if index == 0:
-		get_tree().change_scene_to_file("res://Scenes/test_scene.tscn")
+		get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")
 	pass # Replace with function body.

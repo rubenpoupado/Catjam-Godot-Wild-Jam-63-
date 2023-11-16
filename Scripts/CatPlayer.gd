@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var gameManager = get_node("../")
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -320.0
+const JUMP_VELOCITY = -350.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
