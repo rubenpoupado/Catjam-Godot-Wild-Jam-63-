@@ -16,8 +16,8 @@ position = Vector2(-64, 1276)
 motion_mirroring = Vector2(1728, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sky"]
-position = Vector2(-1095, -2883)
-scale = Vector2(10, 10)
+position = Vector2(-2735, -5764)
+scale = Vector2(30, 60)
 texture = ExtResource("1_7wxly")
 centered = false
 
