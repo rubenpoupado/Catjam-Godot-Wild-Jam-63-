@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://dpnwsq0foqcm"]
+[gd_resource type="TileSet" load_steps=21 format=3 uid="uid://dpnwsq0foqcm"]
 
 [ext_resource type="Texture2D" uid="uid://bndw37ogyx1cv" path="res://Sprites/Terrain/dirt2.png" id="1_fxbl5"]
 [ext_resource type="Texture2D" uid="uid://bnhjuab55s5a0" path="res://Sprites/Terrain/dirt3.png" id="2_7fsnb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dcc6i51k2ta3k" path="res://Sprites/Terrain/grass.png" id="7_tsv25"]
 [ext_resource type="Texture2D" uid="uid://chn5m4oohgu7" path="res://Sprites/Terrain/platform.png" id="8_dk65c"]
 [ext_resource type="Texture2D" uid="uid://bdsoqvt5ndhbp" path="res://Sprites/Terrain/tree.png" id="9_qgj2h"]
+[ext_resource type="Texture2D" uid="uid://f6ax760igx0u" path="res://Sprites/Terrain/small_brick.png" id="9_vlwle"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_501qs"]
 texture = ExtResource("1_fxbl5")
@@ -74,6 +75,14 @@ texture_region_size = Vector2i(64, 64)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-30.8475, -7.68979, -32, -6.18718, -32, -1.41422, -30.8475, -0.441941, 30.6708, -0.265165, 32, -1.41421, 32, -6.8059, 30.7591, -7.95495)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6c3ea"]
+texture = ExtResource("9_vlwle")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.25, -16, 16, -16, 16.25, 16.25, -16.5, 16)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2bs7"]
 texture = ExtResource("9_qgj2h")
 texture_region_size = Vector2i(64, 64)
@@ -93,3 +102,4 @@ sources/4 = SubResource("TileSetAtlasSource_u1fd6")
 sources/5 = SubResource("TileSetAtlasSource_x0jyy")
 sources/6 = SubResource("TileSetAtlasSource_6clcb")
 sources/7 = SubResource("TileSetAtlasSource_wpn7h")
+sources/8 = SubResource("TileSetAtlasSource_6c3ea")

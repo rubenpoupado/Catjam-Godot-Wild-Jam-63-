@@ -6,6 +6,7 @@ const WAIT_DURATION = 1.0
 @onready var object = $saw as Area2D
 @export var speed = 5.0
 @export var distance = 64*5
+@export var horizontal_flag = false
 
 var follow = Vector2.ZERO
 var platform_center = 32
@@ -24,7 +25,7 @@ func _physics_process(delta):
 		object.position = object.position.lerp(follow, 0.5)
 	
 func move_object():
-	var direction = Vector2.RIGHT * distance 
+	var direction = Vector2.RIGHT * distance if horizontal_flag else Vector2.UP * distance
 	var duration = direction.length()/float(speed*platform_center)
 	
 	var platform_tween = create_tween().set_loops()
@@ -34,3 +35,4 @@ func move_object():
 func _draw():
 	if Engine.is_editor_hint():
 		draw_line(Vector2(position.x-platform_center-global_position.x, position.y-global_position.y), Vector2(position.x+platform_center-global_position.x + distance, position.y-global_position.y), Color.RED, 1.5)
+	
