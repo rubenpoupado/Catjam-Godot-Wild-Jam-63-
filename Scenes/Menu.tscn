@@ -89,11 +89,7 @@ item_count = 4
 item_0/text = "Tutorial"
 item_1/text = "Level 1"
 item_2/text = "Level 2"
-item_2/selectable = false
-item_2/disabled = true
 item_3/text = "Level 3"
-item_3/selectable = false
-item_3/disabled = true
 
 [node name="Credits" type="Label" parent="PanelContainer"]
 visible = false
@@ -102,14 +98,11 @@ theme_override_colors/font_outline_color = Color(0.517647, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = SubResource("SystemFont_b0qhe")
 theme_override_font_sizes/font_size = 60
-text = "Writing & Coding
+text = "Made by
 Poupado
-
-Art & Coding
 Toino
 
-Thanks to ikoiku's cat sprite
-and ?'s backgrounds!"
+Thanks to ikoiku's cat sprite"
 horizontal_alignment = 1
 vertical_alignment = 1
 
