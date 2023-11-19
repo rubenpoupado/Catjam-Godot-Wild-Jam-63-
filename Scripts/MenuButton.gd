@@ -3,6 +3,8 @@ extends Control
 @onready var panelContainer = get_node("PanelContainer")
 @onready var levelsList = get_node("PanelContainer/Levels")
 @onready var credits = get_node("PanelContainer/Credits")
+@onready var title = get_node("Title")
+@onready var version = get_node("Version")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +23,12 @@ func _on_credits_pressed():
 		panelContainer.visible = not panelContainer.visible
 		credits.visible = not credits.visible
 		levelsList.visible = false
-
+	if levelsList.visible or credits.visible:
+		title.visible = false
+		version.visible = false
+	else:
+		title.visible = true
+		version.visible = true
 
 func _on_play_pressed():
 	if credits.visible:
@@ -30,7 +37,12 @@ func _on_play_pressed():
 	else:
 		panelContainer.visible = not panelContainer.visible
 		levelsList.visible = not levelsList.visible
-
+	if levelsList.visible or credits.visible:
+		title.visible = false
+		version.visible = false
+	else:
+		title.visible = true
+		version.visible = true
 
 func _on_levels_item_clicked(index, at_position, mouse_button_index):
 	if index == 0:

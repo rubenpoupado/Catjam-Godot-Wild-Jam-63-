@@ -6,9 +6,9 @@ Game built for the [Godot Wild Jam](https://itch.io/jam/godot-wild-jam-63) Gamej
 **Wildcards used**: None
 
 ## Developed by
-[Poupado](https://github.com/RubenPPP) (Coding, Writing)
+[Poupado](https://github.com/RubenPPP)
 
-[Toino](https://github.com/AntonioNevess) (Art)
+[Toino](https://github.com/AntonioNevess)
 
 ## About
 The game is a simple platformer with deadly hazards, the player controls a cat

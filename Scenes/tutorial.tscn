@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b3u07t88377jl" path="res://Scenes/menu_ui.tscn" id="14_fmrro"]
 [ext_resource type="PackedScene" uid="uid://dy26wek8rasn2" path="res://Scenes/goal.tscn" id="15_sayml"]
 
-[node name="GameManager" instance=ExtResource("1_faoo5")]
+[node name="GameManager2" instance=ExtResource("1_faoo5")]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 tile_set = ExtResource("2_psxgc")
@@ -132,9 +132,7 @@ offset_left = -1269.0
 offset_top = -335.0
 offset_right = -924.0
 offset_bottom = -203.0
-text = "Much like my unwritten story
-Here lies one more.
-"
+text = "How do I stop this past one I mourn?"
 
 [node name="Label10" parent="UI/WorldLabels" index="6" instance=ExtResource("11_tslxr")]
 layout_mode = 0

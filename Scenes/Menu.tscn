@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://4nfh0rapsa30"]
+[gd_scene load_steps=11 format=3 uid="uid://4nfh0rapsa30"]
 
 [ext_resource type="Script" path="res://Scripts/MenuButton.gd" id="1_yt45w"]
 [ext_resource type="Texture2D" uid="uid://dcc6i51k2ta3k" path="res://Sprites/Terrain/grass.png" id="2_bi2oi"]
 [ext_resource type="Texture2D" uid="uid://dm3yd6jounb16" path="res://Sprites/Player/WhiteCatIdle.png" id="2_qqaoj"]
+[ext_resource type="PackedScene" uid="uid://bcowcx6irwxo1" path="res://Scenes/world_label.tscn" id="4_82po4"]
 
 [sub_resource type="SystemFont" id="SystemFont_tnvts"]
 subpixel_positioning = 0
@@ -105,6 +106,37 @@ Toino
 Thanks to ikoiku's cat sprite"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Title" parent="." instance=ExtResource("4_82po4")]
+z_index = -1
+layout_mode = 0
+offset_left = 816.0
+offset_top = 233.0
+offset_right = 1823.0
+offset_bottom = 515.0
+theme_override_colors/font_color = Color(1, 0.443137, 0.376471, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 180
+text = "Ragecat Lite"
+
+[node name="Version" parent="." instance=ExtResource("4_82po4")]
+z_index = -1
+offset_left = 1247.0
+offset_top = 352.0
+offset_right = 2254.0
+offset_bottom = 634.0
+theme_override_colors/font_color = Color(1, 0.745098, 0.705882, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 12
+theme_override_font_sizes/font_size = 60
+text = "v.0.1"
 
 [node name="World_Menu" type="Node" parent="."]
 
