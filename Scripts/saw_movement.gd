@@ -35,4 +35,3 @@ func move_object():
 func _draw():
 	if Engine.is_editor_hint():
 		draw_line(Vector2(position.x-platform_center-global_position.x, position.y-global_position.y), Vector2(position.x+platform_center-global_position.x + distance, position.y-global_position.y), Color.RED, 1.5)
-	

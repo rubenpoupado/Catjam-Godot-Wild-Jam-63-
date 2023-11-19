@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7tk5n5e5au12"]
+[gd_scene load_steps=10 format=3 uid="uid://boq4n2uk1wid5"]
 
 [ext_resource type="PackedScene" uid="uid://bbx8xow421wf2" path="res://Scenes/game_manager.tscn" id="1_6fcct"]
 [ext_resource type="TileSet" uid="uid://dpnwsq0foqcm" path="res://Tilesets/terrain.tres" id="2_tixag"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d05478qmbkpg4" path="res://Scenes/saw.tscn" id="4_yf378"]
 [ext_resource type="PackedScene" uid="uid://custkrafp7ah4" path="res://Scenes/parallax_background.tscn" id="5_ryjvd"]
 [ext_resource type="PackedScene" uid="uid://dy26wek8rasn2" path="res://Scenes/goal.tscn" id="6_udp1v"]
-[ext_resource type="PackedScene" uid="uid://bcowcx6irwxo1" path="res://Scenes/world_label.tscn" id="7_7f1h8"]
+[ext_resource type="PackedScene" path="res://Scenes/world_label.tscn" id="7_7f1h8"]
 [ext_resource type="PackedScene" uid="uid://b3u07t88377jl" path="res://Scenes/menu_ui.tscn" id="7_voxp0"]
 [ext_resource type="PackedScene" uid="uid://b2kel70d1wcur" path="res://Scenes/moving_plaftorm.tscn" id="9_xyyao"]
 
@@ -37,6 +37,7 @@ rotation = -1.5708
 [node name="movingSaw" parent="." index="5" instance=ExtResource("4_yf378")]
 position = Vector2(223, 64)
 distance = 260
+horizontal_flag = true
 
 [node name="Spike5" parent="." index="6" instance=ExtResource("3_g28j1")]
 position = Vector2(272, -512)
@@ -49,6 +50,7 @@ rotation = -1.5708
 [node name="movingSaw2" parent="." index="8" instance=ExtResource("4_yf378")]
 position = Vector2(283, -736)
 distance = 200
+horizontal_flag = true
 
 [node name="ParallaxBackground" parent="." index="9" instance=ExtResource("5_ryjvd")]
 
@@ -69,12 +71,15 @@ position = Vector2(1776, -272)
 
 [node name="movingSaw3" parent="." index="15" instance=ExtResource("4_yf378")]
 position = Vector2(2709, 128)
+horizontal_flag = true
 
 [node name="movingSaw4" parent="." index="16" instance=ExtResource("4_yf378")]
 position = Vector2(2782, 43)
+horizontal_flag = true
 
 [node name="movingSaw5" parent="." index="17" instance=ExtResource("4_yf378")]
 position = Vector2(2848, 128)
+horizontal_flag = true
 
 [node name="Goal" parent="." index="18" instance=ExtResource("6_udp1v")]
 position = Vector2(1640, -1315)
